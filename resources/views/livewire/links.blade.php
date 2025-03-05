@@ -11,7 +11,7 @@
         <div class="flex-1 self-stretch max-md:pt-6">
             <div class="space-y-3">
                 @foreach($links as $link)
-                    <div class="border border-zinc-500 rounded-lg px-2 py-1 flex items-center justify-between">
+                    <div class="border border-zinc-500 rounded-lg px-2 py-1 flex items-center justify-between" wire:key="link-{{ $link->id }}">
                         <div>
                             <flux:heading class="!mb-0">{{ $link->name }}</flux:heading>
                             <flux:subheading>{{ $link->url }}</flux:subheading>
